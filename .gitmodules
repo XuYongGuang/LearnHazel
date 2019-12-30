@@ -1,3 +1,12 @@
 [submodule "Hazel/vendor/GLFW"]
 	path = Hazel/vendor/GLFW
 	url = https://github.com/glfw/glfw.git
+[submodule "Hazel/vendor/spdlog"]
+	path = Hazel/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
+[submodule "Hazel/vendor/imgui"]
+	path = Hazel/vendor/imgui
+	url = /Users/xuyongguang/imgui
+[submodule "Hazel/vendor/glm"]
+	path = Hazel/vendor/glm
+	url = /Users/xuyongguang/CppProject/LearnHazel/Hazel/vendor/glm
