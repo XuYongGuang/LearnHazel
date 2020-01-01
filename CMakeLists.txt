@@ -11,7 +11,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 # Enable warning
-add_compile_options(-Wall -Wextra -Wpedantic)
+# add_compile_options(-Wall -Wextra -Wpedantic)
 
 # Default to a release build
 if(NOT CMAKE_BUILD_TYPE)
@@ -35,8 +35,9 @@ set(CMAKE_CXX_FLAGS_RELEASE -DHZ_RELEASE)
 # Include
 target_include_directories(hazel PUBLIC
   "${PROJECT_SOURCE_DIR}/Hazel/src"
+  "${PROJECT_SOURCE_DIR}/Hazel/vendor/GLFW/include"
   "${PROJECT_SOURCE_DIR}/Hazel/vendor/Glad/include"
-  "${PROJECT_SOURCE_DIR}/Hazel/vendor/glm"
+  "${PROJECT_SOURCE_DIR}/Hazel/vendor/glm/glm"
   "${PROJECT_SOURCE_DIR}/Hazel/vendor/imgui"
   "${PROJECT_SOURCE_DIR}/Hazel/vendor/spdlog/include"
   "${PROJECT_SOURCE_DIR}/Hazel/vendor/stb_image"
@@ -50,6 +51,10 @@ target_compile_options(hazel PRIVATE -DGLFW_INCLUDE_NONE)
 # glad
 add_subdirectory(Hazel/vendor/Glad)
 target_link_libraries(hazel PRIVATE glad)
+
+# glm
+add_subdirectory(Hazel/vendor/glm/glm)
+target_link_libraries(hazel PRIVATE glm)
 
 # imgui
 add_subdirectory(Hazel/vendor/imgui)

@@ -1,5 +1,5 @@
 #include "Hazel.h"
-#include "glm/gtc/type_ptr.hpp"
+#include "gtc/type_ptr.hpp"
 
 class Sandbox : public Hazel::Application
 {

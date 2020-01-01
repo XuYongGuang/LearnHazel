@@ -4,15 +4,13 @@
 
 namespace Hazel{
 
-    extern "C" {
-        class Application {
-        public:
-            Application();
+    class Application {
+    public:
+        Application();
 
-            ~Application();
+        ~Application();
 
-            void Run();
-        };
+        void Run();
     };
 
     // to be define in client
